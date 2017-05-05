@@ -2,6 +2,7 @@
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
+;;; Code:
 (package-initialize)
 
 (custom-set-variables
@@ -12,7 +13,7 @@
  '(custom-enabled-themes (quote (dracula)))
  '(custom-safe-themes
    (quote
-    ("ff7625ad8aa2615eae96d6b4469fcc7d3d20b2e1ebc63b761a349bebbb9d23cb" "b97a01622103266c1a26a032567e02d920b2c697ff69d40b7d9956821ab666cc" default)))
+    ("ff7625ad8aa2615eae96d6b4469fcc7d3d20b2e1ebc63b761a349bebbb9d23cb" default)))
  '(horizontal-scroll-bar-mode nil)
  '(initial-frame-alist (quote ((fullscreen . maximized))))
  '(linum-format "%d ")
@@ -27,7 +28,7 @@
  '(package-enable-at-startup nil)
  '(package-selected-packages
    (quote
-    (crux undo-tree web-mode helm-ag ag flycheck dracula-theme json-mode magit expand-region multiple-cursors helm-projectile helm projectile company company-jedi powerline)))
+    (undo-tree web-mode helm-ag ag flycheck dracula-theme json-mode magit expand-region multiple-cursors helm-projectile helm projectile company company-jedi powerline)))
  '(scroll-bar-mode nil)
  '(tool-bar-mode nil))
 (custom-set-faces
@@ -116,6 +117,10 @@
 (add-hook 'web-mode-hook  'my/web-mode-hook)
 
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.js?\\'" . web-mode))
 
 ;; configure undo tree for better undo-redo experience
 (global-undo-tree-mode)
+
+;; make emacs cursor as bar
+(setq-default cursor-type 'bar) 
