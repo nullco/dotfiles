@@ -56,6 +56,7 @@
 ;; enable company mode globally
 (global-company-mode t)
 (setq company-minimum-prefix-length 1)
+(setq company-dabbrev-downcase nil)
 ;; enable flycheck mode
 (global-flycheck-mode)
 ;; display line numbers globally
