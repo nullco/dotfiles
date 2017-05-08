@@ -28,7 +28,7 @@
  '(package-enable-at-startup nil)
  '(package-selected-packages
    (quote
-    (highlight-indent-guides js2-mode undo-tree web-mode helm-ag ag flycheck dracula-theme json-mode magit expand-region multiple-cursors helm-projectile helm projectile company company-jedi powerline)))
+    (iy-go-to-char ace-jump-mode highlight-indent-guides js2-mode undo-tree web-mode helm-ag ag flycheck dracula-theme json-mode magit expand-region multiple-cursors helm-projectile helm projectile company company-jedi powerline)))
  '(scroll-bar-mode nil)
  '(tool-bar-mode nil))
 (custom-set-faces
@@ -153,3 +153,11 @@
     (local-set-key (kbd "C-c <up>")    'hs-hide-all)
     (local-set-key (kbd "C-c <down>")  'hs-show-all)
     (hs-minor-mode t)))
+
+;; ace jump config (jump to x character easly)
+(define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
+(define-key global-map (kbd "C-x SPC") 'ace-jump-mode-pop-mark)
+
+;; iy-go-to-char config (jump to n occurrence of character)
+(global-set-key (kbd "C-c f") 'iy-go-up-to-char)
+(global-set-key (kbd "C-c F") 'iy-go-up-to-char-backward)
