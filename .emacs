@@ -28,7 +28,7 @@
  '(package-enable-at-startup nil)
  '(package-selected-packages
    (quote
-    (iy-go-to-char ace-jump-mode highlight-indent-guides js2-mode undo-tree helm-ag ag flycheck dracula-theme json-mode magit expand-region multiple-cursors helm-projectile helm projectile company company-jedi powerline)))
+    (iy-go-to-char ace-jump-mode highlight-indent-guides js2-mode undo-tree helm-ag ag flycheck dracula-theme json-mode magit expand-region multiple-cursors helm-projectile helm projectile company company-jedi)))
  '(scroll-bar-mode nil)
  '(tool-bar-mode nil))
 (custom-set-faces
@@ -89,10 +89,6 @@
 
 ;; expand-region binding key
 (global-set-key (kbd "C-=") 'er/expand-region)
-
-;; powerline config
-(setq ns-use-srgb-colorspace nil)
-(powerline-default-theme)
 
 ;; allow dired-find-alternative-file in order to be able to navigate through directories without opening new buffers
 (put 'dired-find-alternate-file 'disabled nil)
