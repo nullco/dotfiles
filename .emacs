@@ -59,6 +59,7 @@
 (global-company-mode t)
 (setq company-minimum-prefix-length 1)
 (setq company-dabbrev-downcase nil)
+(setq company-idle-delay 0)
 ;; display line numbers globally
 (global-linum-mode t)
 
@@ -114,6 +115,11 @@
   (local-set-key (kbd "C-c <up>")    'hs-hide-all)
   (local-set-key (kbd "C-c <down>")  'hs-show-all)
   (hs-minor-mode t))
+
+;; configure html mode hooks
+(defun my/html-mode-hook()
+  (my/hideshow-mode-enable)
+  (set (make-local-variable 'sgml-basic-offset) 4))
 
 ;; configure python-mode hooks
 (defun my/python-mode-hook ()
