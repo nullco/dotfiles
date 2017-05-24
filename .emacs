@@ -13,7 +13,7 @@
  '(custom-enabled-themes (quote (monokai)))
  '(custom-safe-themes
    (quote
-    ("f5b591870422cd28da334552aae915cdcae3edfcfedb6653a9f42ed84bbec69f" default)))
+    ("f78de13274781fbb6b01afd43327a4535438ebaeec91d93ebdbba1e3fba34d3c" default)))
  '(horizontal-scroll-bar-mode nil)
  '(initial-frame-alist (quote ((fullscreen . maximized))))
  '(linum-format "%d ")
@@ -28,7 +28,7 @@
  '(package-enable-at-startup nil)
  '(package-selected-packages
    (quote
-    (monokai-theme iy-go-to-char ace-jump-mode highlight-indent-guides js2-mode undo-tree helm-ag ag flycheck json-mode magit expand-region multiple-cursors helm-projectile helm projectile company company-jedi)))
+    (monokai-theme iy-go-to-char ace-jump-mode js2-mode undo-tree helm-ag ag flycheck json-mode magit expand-region multiple-cursors helm-projectile helm projectile company company-jedi)))
  '(scroll-bar-mode nil)
  '(tool-bar-mode nil))
 (custom-set-faces
@@ -36,6 +36,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(linum ((t (:inherit default))))
  )
 
 (add-to-list 'exec-path "/usr/local/bin/")
@@ -100,10 +101,6 @@
 
 ;; Show closing parenthesis and brakets
 (show-paren-mode 1)
-
-;; highlight indent configuration 
-(add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
-(setq highlight-indent-guides-method 'character)
 
 (defun my/hideshow-mode-enable()
   (local-set-key (kbd "C-c <right>") 'hs-show-block)
