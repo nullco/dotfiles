@@ -10,10 +10,10 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-enabled-themes (quote (dracula)))
+ '(custom-enabled-themes (quote (monokai)))
  '(custom-safe-themes
    (quote
-    ("ff7625ad8aa2615eae96d6b4469fcc7d3d20b2e1ebc63b761a349bebbb9d23cb" default)))
+    ("f5b591870422cd28da334552aae915cdcae3edfcfedb6653a9f42ed84bbec69f" default)))
  '(horizontal-scroll-bar-mode nil)
  '(initial-frame-alist (quote ((fullscreen . maximized))))
  '(linum-format "%d ")
@@ -28,7 +28,7 @@
  '(package-enable-at-startup nil)
  '(package-selected-packages
    (quote
-    (iy-go-to-char ace-jump-mode highlight-indent-guides js2-mode undo-tree helm-ag ag flycheck dracula-theme json-mode magit expand-region multiple-cursors helm-projectile helm projectile company company-jedi)))
+    (monokai-theme iy-go-to-char ace-jump-mode highlight-indent-guides js2-mode undo-tree helm-ag ag flycheck json-mode magit expand-region multiple-cursors helm-projectile helm projectile company company-jedi)))
  '(scroll-bar-mode nil)
  '(tool-bar-mode nil))
 (custom-set-faces
