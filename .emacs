@@ -114,6 +114,8 @@
   (my/hideshow-mode-enable)
   (set (make-local-variable 'sgml-basic-offset) 4))
 
+(add-hook 'html-mode-hook 'my/python-mode-hook)
+
 ;; configure python-mode hooks
 (defun my/python-mode-hook ()
   (add-to-list 'company-backends 'company-jedi)
@@ -138,6 +140,9 @@
 
 ;; make emacs cursor as bar
 (setq-default cursor-type 'bar)
+
+;; general flycheck configuration
+(setq flycheck-highlighting-mode 'lines)
 
 ;; ace jump config (jump to x character easly)
 (define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
