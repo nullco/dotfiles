@@ -114,7 +114,7 @@
   (my/hideshow-mode-enable)
   (set (make-local-variable 'sgml-basic-offset) 4))
 
-(add-hook 'html-mode-hook 'my/python-mode-hook)
+(add-hook 'html-mode-hook 'my/html-mode-hook)
 
 ;; configure python-mode hooks
 (defun my/python-mode-hook ()
