@@ -96,8 +96,6 @@
 
 ;; configure electric pair mode to auto-close parenthesis, etc
 (electric-pair-mode 1)
-;; configure electric indent to stop indenting previous line
-(setq-default electric-indent-inhibit t)
 
 ;; Show closing parenthesis and brakets
 (show-paren-mode 1)
