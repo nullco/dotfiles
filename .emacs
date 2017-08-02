@@ -41,6 +41,8 @@
 
 (add-to-list 'exec-path "/usr/local/bin/")
 
+(setq-default indent-tabs-mode nil)
+
 ;; replace yes or no questions for y or n
 (defalias 'yes-or-no-p 'y-or-n-p)
 
@@ -63,6 +65,9 @@
 (setq company-idle-delay 0)
 ;; display line numbers globally
 (global-linum-mode t)
+
+;; magit configuration
+(global-set-key (kbd "C-x g") #'magit-status)
 
 ;; use ibuffer instead of the default buffer list
 (global-set-key (kbd "C-x C-b") #'ibuffer)
